@@ -26,19 +26,28 @@ public class DeterminarCalificacion {
 
         JFrame jFrame = new JFrame("My Frame");
         estudiante = JOptionPane.showInputDialog(jFrame, "Ingresa el nombre del alumno");
-        calificacion = Integer.parseInt(JOptionPane.showInputDialog(jFrame, "Ingresa la calificacion","acsd"));
+        calificacion = Integer.parseInt(JOptionPane.showInputDialog(jFrame, "Ingresa la calificacion"));
 
+        Alumno alumno = new Alumno();
+        DeterminarCalificacion determinarCalificacion = new DeterminarCalificacion();
+
+        alumno.setAlumno(estudiante);
+        alumno.setCalificacion(calificacion);
+        //System.out.printf("Nombre :" + alumno.getAlumno() + "\n" + "Calificacion : " + alumno.getCalificacion());
+        thisCalificacion(calificacion);
+    }
+
+    public static void thisCalificacion(int calificacion) {
         if (calificacion >= 0 && calificacion <= 10) {
 
             if (calificacion >= 0 && calificacion <= 5) {
-                System.out.println("Estudiando con promedio MALO " + estudiante);
+                System.out.println("Estudiando con promedio MALO ");
             } else if (calificacion > 5 && calificacion <= 7) {
-                System.out.println("Estudiando con promedio REGULAR "+ estudiante);
+                System.out.println("Estudiando con promedio REGULAR ");
             } else if (calificacion > 7 && calificacion <= 8) {
-                System.out.println("Estudiando con promedio BUENO "+ estudiante);
+                System.out.println("Estudiando con promedio BUENO ");
             } else if (calificacion == 9 || calificacion == 10) {
-                System.out.println("Estudiando con promedio EXCELENTE "+ estudiante);
-
+                System.out.println("Estudiando con promedio EXCELENTE ");
             }
         } else {
             System.out.println("Verifica el valor de calificacion");
