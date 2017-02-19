@@ -26,18 +26,18 @@ public class DeterminarCalificacion {
 
         JFrame jFrame = new JFrame("My Frame");
         estudiante = JOptionPane.showInputDialog(jFrame, "Ingresa el nombre del alumno");
-        calificacion = Integer.parseInt(JOptionPane.showInputDialog(jFrame, "Ingresa la calificacion"));
+        calificacion = Integer.parseInt(JOptionPane.showInputDialog(jFrame, "Ingresa la calificacion","acsd"));
 
         if (calificacion >= 0 && calificacion <= 10) {
 
             if (calificacion >= 0 && calificacion <= 5) {
-                System.out.println("Estudiando con promedio MALO");
+                System.out.println("Estudiando con promedio MALO " + estudiante);
             } else if (calificacion > 5 && calificacion <= 7) {
-                System.out.println("Estudiando con promedio REGULAR");
+                System.out.println("Estudiando con promedio REGULAR "+ estudiante);
             } else if (calificacion > 7 && calificacion <= 8) {
-                System.out.println("Estudiando con promedio BUENO");
+                System.out.println("Estudiando con promedio BUENO "+ estudiante);
             } else if (calificacion == 9 || calificacion == 10) {
-                System.out.println("Estudiando con promedio EXCELENTE");
+                System.out.println("Estudiando con promedio EXCELENTE "+ estudiante);
 
             }
         } else {
